@@ -54,10 +54,10 @@ app.post("/", function(req, res) {
   };
 
   const jsonData = JSON.stringify(data);
-  const url = "https://us17.api.mailchimp.com/3.0/lists/f2fc5baabf";
+  const url = "https://us17.api.mailchimp.com/3.0/lists/";
   const options = {
     method: "POST",
-    auth: "shreyas:1b95ce859316c088140736e696df337c-us17"
+    auth: "";
   }
   const request = https.request(url, options, function(response) {
     if (response.statusCode === 200) {
@@ -82,8 +82,3 @@ app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");
 })
 
-//API Key
-//1b95ce859316c088140736e696df337c-us17
-
-//Lidt // IDEA:
-//f2fc5baabf
